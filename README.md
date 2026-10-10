@@ -2,6 +2,8 @@
 
 A personalised student year-in-review web app — plain HTML, CSS, and JavaScript. No frameworks, no build step, no backend.
 
+**Live demo:** [https://jackychabalala.github.io/student-wrapped/](https://jackychabalala.github.io/student-wrapped/)
+
 ## Features
 
 - **Profile, Academics, Achievements, Lifestyle** — enter and edit your own data
@@ -44,9 +46,26 @@ js/
 3. Press **Play** for a ~30 second preview  
    Each play counts toward your ranking for Wrapped.
 
-## Deploy
+## Deploy (live URL)
 
-Upload this folder to any static host (Netlify, Cloudflare Pages, GitHub Pages). No build command. HTTPS is recommended.
+This is a static site. Host the folder on any static host. No build command.
+
+### GitHub Pages (used for this repo)
+
+1. Push the project to a GitHub repository
+2. On GitHub: **Settings → Pages**
+3. Under **Build and deployment**, set **Source** to **Deploy from a branch**
+4. Choose branch `main` and folder `/` (root), then **Save**
+5. After a minute or two, open:  
+   `https://<your-username>.github.io/<repo-name>/`
+
+For this project that is:  
+https://jackychabalala.github.io/student-wrapped/
+
+### Other hosts
+
+- **Netlify:** drag-and-drop the project folder at [app.netlify.com/drop](https://app.netlify.com/drop), or connect the GitHub repo (publish directory = `.`, no build command)
+- **Cloudflare Pages:** connect the repo or upload the folder; same settings (no build, output = root)
 
 ## Privacy
 
