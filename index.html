@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0b14" />
+  <meta name="description" content="Student Wrapped — your personalised year-in-review for student life." />
+  <title>Student Wrapped</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app-shell">
+    <!-- Desktop sidebar -->
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="sidebar__brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Student Wrapped</span>
+      </div>
+      <nav class="sidebar__nav" aria-label="Primary">
+        <button type="button" class="nav-item is-active" data-view="dashboard" aria-current="page">
+          <span class="nav-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"/></svg></span>
+          <span class="nav-item__label">Home</span>
+        </button>
+        <button type="button" class="nav-item" data-view="academics">
+          <span class="nav-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M6 17V9l6-4 6 4v8M9 17v-4h6v4"/></svg></span>
+          <span class="nav-item__label">Academics</span>
+        </button>
+        <button type="button" class="nav-item" data-view="study-clock">
+          <span class="nav-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span class="nav-item__label">Study Clock</span>
+        </button>
+        <button type="button" class="nav-item" data-view="wrapped">
+          <span class="nav-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span>
+          <span class="nav-item__label">My Wrapped</span>
+        </button>
+        <div class="sidebar__divider" role="separator"></div>
+        <button type="button" class="nav-item" data-view="profile">
+          <span class="nav-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.5"/><path d="M5 19c1.5-3 4-4.5 7-4.5s5.5 1.5 7 4.5"/></svg></span>
+          <span class="nav-item__label">Profile</span>
+        </button>
+        <button type="button" class="nav-item" data-view="achievements">
+          <span class="nav-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H5a2 2 0 0 0 2 4M17 6h2a2 2 0 0 1-2 4"/></svg></span>
+          <span class="nav-item__label">Achievements</span>
+        </button>
+        <button type="button" class="nav-item" data-view="music">
+          <span class="nav-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="17" r="2.5"/><circle cx="17" cy="15" r="2.5"/><path d="M9.5 17V6.5L19.5 5v10"/></svg></span>
+          <span class="nav-item__label">Music</span>
+        </button>
+        <button type="button" class="nav-item" data-view="lifestyle">
+          <span class="nav-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M10 21V11a2 2 0 0 1 4 0v10"/><path d="M7 11h10l-1-6H8l-1 6z"/></svg></span>
+          <span class="nav-item__label">Lifestyle</span>
+        </button>
+        <button type="button" class="nav-item" data-view="settings">
+          <span class="nav-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.2M12 18.8V21M4.9 6.5l1.6 1.5M17.5 16l1.6 1.5M3 12h2.2M18.8 12H21M4.9 17.5l1.6-1.5M17.5 8l1.6-1.5"/></svg></span>
+          <span class="nav-item__label">Settings</span>
+        </button>
+      </nav>
+      <p class="sidebar__privacy">Your data stays in this browser. It is not synced across devices.</p>
+    </aside>
+
+    <!-- Tablet top bar -->
+    <header class="topbar" aria-label="App header">
+      <div class="topbar__brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Student Wrapped</span>
+      </div>
+      <nav class="topbar__nav" aria-label="Primary">
+        <button type="button" class="nav-chip is-active" data-view="dashboard" aria-current="page">Home</button>
+        <button type="button" class="nav-chip" data-view="academics">Academics</button>
+        <button type="button" class="nav-chip" data-view="study-clock">Study Clock</button>
+        <button type="button" class="nav-chip" data-view="wrapped">Wrapped</button>
+        <button type="button" class="nav-chip" data-view="profile">Profile</button>
+        <button type="button" class="nav-chip" data-view="achievements">Achievements</button>
+        <button type="button" class="nav-chip" data-view="music">Music</button>
+        <button type="button" class="nav-chip" data-view="lifestyle">Lifestyle</button>
+        <button type="button" class="nav-chip" data-view="settings">Settings</button>
+      </nav>
+    </header>
+
+    <main id="main" class="main" tabindex="-1">
+      <div class="main__inner">
+
+        <!-- ========== DASHBOARD ========== -->
+        <section id="view-dashboard" class="view is-active" data-view-panel="dashboard" aria-labelledby="dash-title">
+          <header class="view__header">
+            <p class="eyebrow">Your year, your story</p>
+            <h1 id="dash-title" class="view__title" data-dash-greeting>Student Wrapped</h1>
+            <p class="view__lead">Track modules, study time, music and wins — then open your personalised Wrapped.</p>
+          </header>
+
+          <div class="dash-top">
+            <div class="completion-ring" aria-label="Profile completion">
+              <svg viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="completion-label">
+                <title id="completion-label">Profile completion</title>
+                <circle class="completion-ring__track" cx="60" cy="60" r="52" />
+                <circle class="completion-ring__value" cx="60" cy="60" r="52" data-completion-circle />
+              </svg>
+              <div class="completion-ring__text">
+                <strong data-completion-pct>0%</strong>
+                <span>complete</span>
+              </div>
+            </div>
+            <div class="dash-cta-block">
+              <p class="muted" data-completion-hint>Fill in Profile to get started.</p>
+              <button type="button" class="btn btn--primary" data-view="wrapped">Continue my Wrapped</button>
+            </div>
+          </div>
+
+          <div class="stat-strip" data-dash-stats>
+            <article class="stat-pill"><span class="stat-pill__label">Modules</span><strong data-stat-modules>0</strong></article>
+            <article class="stat-pill"><span class="stat-pill__label">Simple average</span><strong data-stat-average>—</strong></article>
+            <article class="stat-pill"><span class="stat-pill__label">Study time</span><strong data-stat-study>0h</strong></article>
+            <article class="stat-pill"><span class="stat-pill__label">Achievements</span><strong data-stat-achievements>0</strong></article>
+          </div>
+
+          <div class="card-grid">
+            <article class="dash-card" data-go="academics" tabindex="0" role="button">
+              <h2 class="dash-card__title">Academics</h2>
+              <p class="dash-card__text">Add modules and marks. See your simple average.</p>
+              <span class="dash-card__cta">Open →</span>
+            </article>
+            <article class="dash-card" data-go="study-clock" tabindex="0" role="button">
+              <h2 class="dash-card__title">Study Clock</h2>
+              <p class="dash-card__text">Time real sessions. Pause does not count.</p>
+              <span class="dash-card__cta">Open →</span>
+            </article>
+            <article class="dash-card" data-go="music" tabindex="0" role="button">
+              <h2 class="dash-card__title">Music</h2>
+              <p class="dash-card__text">Search songs and play free 30s previews.</p>
+              <span class="dash-card__cta">Open →</span>
+            </article>
+            <article class="dash-card dash-card--accent" data-go="wrapped" tabindex="0" role="button">
+              <h2 class="dash-card__title">My Wrapped</h2>
+              <p class="dash-card__text">A story built only from what you enter.</p>
+              <span class="dash-card__cta">Open →</span>
+            </article>
+            <article class="dash-card" data-go="achievements" tabindex="0" role="button">
+              <h2 class="dash-card__title">Achievements</h2>
+              <p class="dash-card__text">Wins you want to remember.</p>
+              <span class="dash-card__cta">Open →</span>
+            </article>
+            <article class="dash-card" data-go="lifestyle" tabindex="0" role="button">
+              <h2 class="dash-card__title">Lifestyle</h2>
+              <p class="dash-card__text">Optional vibes — coffee, place, habits.</p>
+              <span class="dash-card__cta">Open →</span>
+            </article>
+          </div>
+        </section>
+
+        <!-- ========== PROFILE ========== -->
+        <section id="view-profile" class="view" data-view-panel="profile" hidden aria-labelledby="profile-title">
+          <header class="view__header">
+            <p class="eyebrow">About you</p>
+            <h1 id="profile-title" class="view__title">Profile</h1>
+            <p class="view__lead">Saved on this device only. No passwords or student numbers.</p>
+          </header>
+          <form id="form-profile" class="form-grid" novalidate>
+            <div class="field">
+              <label for="profile-name">Name</label>
+              <input id="profile-name" name="name" type="text" autocomplete="name" maxlength="80" required />
+              <p class="field__error" data-error-for="name" hidden></p>
+            </div>
+            <div class="field">
+              <label for="profile-institution">Institution</label>
+              <input id="profile-institution" name="institution" type="text" autocomplete="organization" maxlength="120" />
+            </div>
+            <div class="field">
+              <label for="profile-field">Field of study</label>
+              <input id="profile-field" name="fieldOfStudy" type="text" maxlength="120" />
+            </div>
+            <div class="field">
+              <label for="profile-year">Year of study</label>
+              <input id="profile-year" name="yearOfStudy" type="text" maxlength="40" placeholder="e.g. Year 2" />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary">Save profile</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- ========== ACADEMICS ========== -->
+        <section id="view-academics" class="view" data-view-panel="academics" hidden aria-labelledby="academics-title">
+          <header class="view__header">
+            <p class="eyebrow">Marks</p>
+            <h1 id="academics-title" class="view__title">Academics</h1>
+            <p class="view__lead">Stats use a <strong>simple average</strong> — not an official weighted result.</p>
+          </header>
+
+          <div class="stat-strip" data-academic-stats>
+            <article class="stat-pill"><span class="stat-pill__label">Simple average</span><strong data-acad-avg>—</strong></article>
+            <article class="stat-pill"><span class="stat-pill__label">Highest</span><strong data-acad-high>—</strong></article>
+            <article class="stat-pill"><span class="stat-pill__label">Lowest</span><strong data-acad-low>—</strong></article>
+            <article class="stat-pill"><span class="stat-pill__label">Strongest</span><strong data-acad-best>—</strong></article>
+          </div>
+
+          <form id="form-module" class="panel form-grid" novalidate>
+            <input type="hidden" id="module-edit-id" value="" />
+            <div class="field">
+              <label for="module-name">Module name</label>
+              <input id="module-name" name="moduleName" type="text" maxlength="100" required />
+              <p class="field__error" data-error-for="moduleName" hidden></p>
+            </div>
+            <div class="field">
+              <label for="module-mark">Mark (0–100)</label>
+              <input id="module-mark" name="mark" type="number" min="0" max="100" step="0.1" required />
+              <p class="field__error" data-error-for="mark" hidden></p>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary" data-module-submit>Add module</button>
+              <button type="button" class="btn btn--secondary" id="module-cancel-edit" hidden>Cancel edit</button>
+            </div>
+          </form>
+
+          <div class="list" id="module-list" aria-live="polite"></div>
+        </section>
+
+        <!-- ========== ACHIEVEMENTS ========== -->
+        <section id="view-achievements" class="view" data-view-panel="achievements" hidden aria-labelledby="achievements-title">
+          <header class="view__header">
+            <p class="eyebrow">Wins</p>
+            <h1 id="achievements-title" class="view__title">Achievements</h1>
+            <p class="view__lead">Add the moments you want in your Wrapped.</p>
+          </header>
+
+          <form id="form-achievement" class="panel form-grid" novalidate>
+            <input type="hidden" id="achievement-edit-id" value="" />
+            <div class="field">
+              <label for="achievement-title">Title</label>
+              <input id="achievement-title" name="title" type="text" maxlength="120" required />
+              <p class="field__error" data-error-for="title" hidden></p>
+            </div>
+            <div class="field">
+              <label for="achievement-date">Date</label>
+              <input id="achievement-date" name="date" type="date" />
+            </div>
+            <div class="field field--full">
+              <label for="achievement-description">Description</label>
+              <textarea id="achievement-description" name="description" rows="3" maxlength="400"></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary" data-achievement-submit>Add achievement</button>
+              <button type="button" class="btn btn--secondary" id="achievement-cancel-edit" hidden>Cancel edit</button>
+            </div>
+          </form>
+
+          <div class="list" id="achievement-list" aria-live="polite"></div>
+        </section>
+
+        <!-- ========== MUSIC (iTunes previews — free, no login) ========== -->
+        <section id="view-music" class="view" data-view-panel="music" hidden aria-labelledby="music-title">
+          <header class="view__header">
+            <p class="eyebrow">Listening</p>
+            <h1 id="music-title" class="view__title">Music</h1>
+            <p class="view__lead">Search a song and play a free ~30 second preview. No account or API key needed. Tracks you play can appear in My Wrapped.</p>
+          </header>
+
+          <form id="form-music-search" class="panel" novalidate>
+            <h2 class="panel__title">Search &amp; play</h2>
+            <div class="inline-form">
+              <label class="sr-only" for="music-search">Search songs</label>
+              <input id="music-search" type="search" maxlength="120" placeholder="Search a song or artist" autocomplete="off" />
+              <button type="submit" class="btn btn--primary">Search</button>
+            </div>
+            <p class="muted" id="music-search-status" aria-live="polite"></p>
+            <div id="music-search-results" class="track-results"></div>
+
+            <div id="music-player-wrap" class="spotify-player-wrap" hidden>
+              <h3 class="panel__title">Now playing <span class="badge">~30s preview</span></h3>
+              <div class="now-playing">
+                <img id="music-now-art" class="art-tile" alt="" width="72" height="72" hidden />
+                <div>
+                  <p id="music-now-playing"><strong></strong></p>
+                  <p id="music-now-artist" class="muted"></p>
+                </div>
+              </div>
+              <audio id="music-audio" controls preload="none" style="width:100%;margin-top:0.75rem"></audio>
+            </div>
+          </form>
+
+          <div class="panel">
+            <h2 class="panel__title">Most played <span class="badge">Auto-ranked</span></h2>
+            <p class="muted" id="music-saved-status">Every time you hit Play, that song moves up your ranking for Wrapped.</p>
+            <div class="music-results" id="music-saved-results"></div>
+          </div>
+        </section>
+
+        <!-- ========== LIFESTYLE ========== -->
+        <section id="view-lifestyle" class="view" data-view-panel="lifestyle" hidden aria-labelledby="lifestyle-title">
+          <header class="view__header">
+            <p class="eyebrow">Optional</p>
+            <h1 id="lifestyle-title" class="view__title">Lifestyle</h1>
+            <p class="view__lead">You enter this — nothing is tracked automatically.</p>
+          </header>
+          <form id="form-lifestyle" class="form-grid panel" novalidate>
+            <div class="field">
+              <label for="lifestyle-coffee">Coffee / drinks per day (optional)</label>
+              <input id="lifestyle-coffee" name="coffeeConsumption" type="text" maxlength="40" placeholder="e.g. 2" />
+            </div>
+            <div class="field">
+              <label for="lifestyle-env">Study environment (optional)</label>
+              <input id="lifestyle-env" name="studyEnvironment" type="text" maxlength="80" placeholder="e.g. Library, desk at home" />
+            </div>
+            <div class="field field--full">
+              <span class="label-like" id="habits-label">Study habits (optional)</span>
+              <div class="chip-select" id="habit-chips" role="group" aria-labelledby="habits-label"></div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary">Save lifestyle</button>
+            </div>
+          </form>
+
+          <div class="panel" id="lifestyle-saved" hidden>
+            <h2 class="panel__title">Saved details</h2>
+            <dl class="saved-details" id="lifestyle-saved-body"></dl>
+          </div>
+        </section>
+
+        <!-- ========== STUDY CLOCK ========== -->
+        <section id="view-study-clock" class="view" data-view-panel="study-clock" hidden aria-labelledby="clock-title">
+          <header class="view__header">
+            <p class="eyebrow">Focus</p>
+            <h1 id="clock-title" class="view__title">Study Clock</h1>
+            <p class="view__lead">Real elapsed time from timestamps. Paused time does not count.</p>
+          </header>
+
+          <div class="clock-layout">
+            <div class="panel clock-panel clock-panel--ios">
+              <form id="form-clock-setup" class="form-stack clock-setup">
+                <div class="field">
+                  <label for="clock-module-select">Module</label>
+                  <select id="clock-module-select"></select>
+                </div>
+                <div class="field" id="clock-new-module-field" hidden>
+                  <label for="clock-new-module">New module name</label>
+                  <input id="clock-new-module" type="text" maxlength="100" />
+                </div>
+                <div class="field">
+                  <label for="clock-target">Target minutes</label>
+                  <input id="clock-target" type="number" min="1" max="600" value="25" />
+                </div>
+              </form>
+
+              <div class="ios-timer" aria-live="polite">
+                <svg class="ios-timer__ring" viewBox="0 0 280 280" aria-hidden="true">
+                  <circle class="ios-timer__track" cx="140" cy="140" r="120" />
+                  <circle class="ios-timer__progress" id="clock-ring" cx="140" cy="140" r="120" />
+                </svg>
+                <div class="ios-timer__center">
+                  <p class="ios-timer__time" id="clock-time">25:00</p>
+                  <p class="ios-timer__end" id="clock-end">Set a target, then start</p>
+                  <p class="ios-timer__over" id="clock-over" hidden>Over target</p>
+                </div>
+              </div>
+              <p class="ios-timer__meta muted" id="clock-meta">Ready</p>
+
+              <div class="ios-timer__actions">
+                <button type="button" class="ios-btn ios-btn--cancel" id="clock-cancel" hidden>Cancel</button>
+                <button type="button" class="ios-btn ios-btn--start" id="clock-start">Start</button>
+                <button type="button" class="ios-btn ios-btn--pause" id="clock-pause" hidden>Pause</button>
+                <button type="button" class="ios-btn ios-btn--start" id="clock-resume" hidden>Resume</button>
+              </div>
+              <div class="timer-actions timer-actions--secondary">
+                <button type="button" class="btn btn--primary" id="clock-complete" hidden>Complete &amp; save</button>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h2 class="panel__title">Session history</h2>
+              <p class="muted" id="clock-overall-total">Overall: 0:00</p>
+              <div id="session-history" class="session-history"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== WRAPPED ========== -->
+        <section id="view-wrapped" class="view view--wrapped" data-view-panel="wrapped" hidden aria-labelledby="wrapped-title">
+          <h1 id="wrapped-title" class="sr-only">My Wrapped</h1>
+          <div class="wrapped-stage">
+            <div class="wrapped-phone" id="wrapped-root">
+              <div id="wrapped-empty" class="wrapped-empty" hidden>
+                <h2 class="view__title">Add some info first</h2>
+                <p class="view__lead">Your Wrapped only uses real data you enter. Start with a few of these:</p>
+                <div class="wrapped-empty__actions" id="wrapped-suggestions"></div>
+              </div>
+
+              <div id="wrapped-player" class="story-player" hidden>
+                <div class="story-progress" id="story-progress" aria-hidden="true"></div>
+                <button type="button" class="story-chevron story-chevron--left" id="story-back" aria-label="Previous slide">‹</button>
+                <button type="button" class="story-chevron story-chevron--right" id="story-next" aria-label="Next slide">›</button>
+                <div class="story-tap story-tap--back" id="story-tap-back" aria-hidden="true"></div>
+                <div class="story-tap story-tap--next" id="story-tap-next" aria-hidden="true"></div>
+                <div class="story-stack" id="story-stack"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== SETTINGS ========== -->
+        <section id="view-settings" class="view" data-view-panel="settings" hidden aria-labelledby="settings-title">
+          <header class="view__header">
+            <p class="eyebrow">Data &amp; privacy</p>
+            <h1 id="settings-title" class="view__title">Settings</h1>
+            <p class="view__lead">Export or clear. Everything stays on this device.</p>
+          </header>
+
+          <div class="panel settings-actions">
+            <button type="button" class="btn btn--primary" id="btn-export">Export my data</button>
+            <button type="button" class="btn btn--secondary" id="btn-sample">Load sample data</button>
+            <button type="button" class="btn btn--danger" id="btn-clear">Clear all my data</button>
+          </div>
+
+          <p class="privacy-note">
+            Your data stays in this browser. It is not synced across devices. Clearing browser data removes it.
+          </p>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile tab bar -->
+  <nav class="tabbar" aria-label="Mobile primary">
+    <button type="button" class="tabbar__item is-active" data-view="dashboard" aria-current="page">
+      <span class="tabbar__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"/></svg></span>
+      <span class="tabbar__label">Home</span>
+    </button>
+    <button type="button" class="tabbar__item" data-view="academics">
+      <span class="tabbar__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M6 17V9l6-4 6 4v8M9 17v-4h6v4"/></svg></span>
+      <span class="tabbar__label">Academics</span>
+    </button>
+    <button type="button" class="tabbar__item" data-view="study-clock">
+      <span class="tabbar__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+      <span class="tabbar__label">Study Clock</span>
+    </button>
+    <button type="button" class="tabbar__item" data-view="wrapped">
+      <span class="tabbar__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span>
+      <span class="tabbar__label">Wrapped</span>
+    </button>
+    <button type="button" class="tabbar__item" data-action="open-more" aria-haspopup="dialog" aria-controls="more-sheet">
+      <span class="tabbar__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></span>
+      <span class="tabbar__label">More</span>
+    </button>
+  </nav>
+
+  <div id="more-sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="more-sheet-title">
+    <button type="button" class="sheet__backdrop" data-action="close-more" aria-label="Close menu"></button>
+    <div class="sheet__panel">
+      <div class="sheet__handle" aria-hidden="true"></div>
+      <h2 id="more-sheet-title" class="sheet__title">More</h2>
+      <nav class="sheet__nav" aria-label="More pages">
+        <button type="button" class="sheet__link" data-view="profile">Profile</button>
+        <button type="button" class="sheet__link" data-view="achievements">Achievements</button>
+        <button type="button" class="sheet__link" data-view="music">Music</button>
+        <button type="button" class="sheet__link" data-view="lifestyle">Lifestyle</button>
+        <button type="button" class="sheet__link" data-view="settings">Settings</button>
+      </nav>
+      <button type="button" class="btn btn--secondary sheet__close" data-action="close-more">Close</button>
+    </div>
+  </div>
+
+  <!-- Loops #1 Wrapped track only while My Wrapped is open -->
+  <audio id="wrapped-soundtrack" preload="none" loop hidden aria-hidden="true"></audio>
+
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Print-only report -->
+  <div id="print-report" class="print-report" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <p>Your data stays in this browser. It is not synced across devices. Clearing browser data removes it.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/academics.js"></script>
+  <script src="js/study-clock.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/wrapped.js"></script>
+  <script src="js/share.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
